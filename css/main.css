@@ -1,0 +1,58 @@
+body {
+    background-color: F8F9F9;
+    border: 0;
+    margin: 0;
+}
+
+/* ------------- HEADER ------------- */
+
+header {
+    background-color: #026aa7;
+    box-sizing: border-box;
+    display: block;
+    height: 6.3%;
+    position: fixed;
+    width: 100%;
+}
+
+header section {
+    display: inline-flex;
+    text-align: center;
+    width: 29%;
+}
+
+header #main-logo {
+    width: 50%;
+}
+
+header #main-logo h1 {
+    border: 0;
+    margin: 0;
+}
+
+header #main-logo h1 img {
+    text-align: center;
+    width: 30%;
+}
+
+header nav {
+    display: inline-flex;
+    width: 20%;
+}
+
+header nav li {
+    height: 15%;
+    text-align: center;
+    
+}
+
+header img {
+    fill: #CCE1ED;
+    height: 1.2em;
+    text-decoration: none;
+    width: 1.2em;
+}
+
+.box-header {
+    color: #67A66CA;
+}
