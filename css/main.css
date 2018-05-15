@@ -1,58 +1,198 @@
 body {
-    background-color: F8F9F9;
-    border: 0;
+    background-color: #0079BF;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    padding: 0;
 }
 
 /* ------------- HEADER ------------- */
 
 header {
-    background-color: #026aa7;
+    background-color: #0067A3       ;
     box-sizing: border-box;
-    display: block;
-    height: 6.3%;
-    position: fixed;
+    display: inline-flex;
+    height: 40px;
+    position: relative;
+    top: 0;
     width: 100%;
 }
 
-header section {
+header > * > div {
     display: inline-flex;
-    text-align: center;
-    width: 29%;
+    position: absolute;
 }
 
-header #main-logo {
-    width: 50%;
+header #trello-tablero {
+    box-sizing: content-box;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    bottom: 4px;
 }
 
-header #main-logo h1 {
-    border: 0;
+header div#trello-tablero > a:first-child {
+    background-color: #66A4C8;
+    padding: 0.5em;
+    margin-right: 13px;
+    position: relative;
+    bottom: 0.9em;
+    width: 74px;
+}
+
+header div#trello-tablero a#search-area > a:last-child {
+    float: right;
+    right: 3px;
+}
+
+header div#trello-tablero a#search-area > textarea {
+    background-color: #66A4C8;
+    height: 20px;
+    padding: 0.5em;
+    width: 180px;
+}
+
+header #trello-top  {
+    display: inline;
+    top: 0;
+}
+
+header #trello-top a > h1 {
+    left: 3em;
     margin: 0;
+    position: relative;
+    opacity: .4;
+    overflow: auto;
+    width: 3em;
 }
 
-header #main-logo h1 img {
-    text-align: center;
-    width: 30%;
-}
-
-header nav {
-    display: inline-flex;
-    width: 20%;
-}
-
-header nav li {
-    height: 15%;
+header #trello-top a h1 img { 
+    height: 25px;
     text-align: center;
     
 }
 
-header img {
-    fill: #CCE1ED;
+header nav#list-menu {
+    right: 8px;
+    overflow: auto;
+    position: absolute;
+} 
+
+header nav li {
+    display: inline-flex;
     height: 1.2em;
-    text-decoration: none;
-    width: 1.2em;
+    text-decoration: none;    
 }
 
+/* ------------- MAIN ------------- */
+main {
+    height: 300px;
+    width: 100%;
+}
+
+/* ------------- HEADER DE MAIN ------------- */
+main #header-main {
+    box-sizing: border-box;
+    display: inline-flex;
+    padding-top: 13px;
+    text-decoration: none;
+    width: 100%;
+}
+
+main #header-main section > a {
+    color: white;
+    text-decoration: none;
+}
+
+main #header-main section:first-child a span {
+    margin-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+main #header-main section:last-child {
+    display: absolute;
+}
+
+main #header-main section:last-child a span {
+    position: absolute;
+    right: 13px;
+}
+
+/* ------------- SECCION DE TABLEROS ------------- */
+
+main .tablero div {
+    background-color: #005485;
+    color: white;
+    height: 30px;
+    left: 8px;
+    position: relative;
+    opacity: .6;
+    top: 9px;
+    width: 300px;
+}
+
+main .tablero div > p {
+    margin: 0;
+    position: relative;
+    left: .2em;
+    top: .3em;
+}
+
+main section.tablero #tablero-lista {
+    border: 1px solid green;
+    background-color: #E2E4E6;
+    bottom: 2px;
+    box-sizing: content-box;
+    color: black;
+    display: inline-block;
+    left: 8px;
+    position: relative;
+    width: 300px;
+}
+
+main section.tablero #tablero-lista > input:first-child {
+    background-color: #E2E4E6;
+    color: black;
+    display: block;
+    border-radius: 3px;
+    min-height: 30px;
+    top: 30px;
+    left: 8px;
+    width: 100%;
+}
+
+main section.tablero #tablero-lista > input {
+    border: none;
+    background-color: #5aac44;
+    border-radius: 3px;
+    color: white;
+    min-height: 32px;
+    padding: 4px, 16px;
+    width: 30%;
+}
+
+main .tablero #tablero-lista > i {
+    color: grey;
+}
+
+main section.tablero #tablero-lista > input:last-child {
+    border: 1px solid red;
+    background-color: inherit;
+    color: gray;
+    font-size: 2em;
+    padding: 
+}
+
+/* ------------- CLASES ------------- */
 .box-header {
-    color: #67A66CA;
+    align-content: center;
+    background-color: #3385B5;
+    border-radius: 8px;
+    font-weight: lighter;
+    height: 1.8em;
+    text-align: center; 
+    margin-right: 0.5em;
+    margin: 0;
+    right: 5em;
+    width: 2em;
 }

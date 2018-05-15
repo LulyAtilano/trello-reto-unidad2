@@ -5,43 +5,81 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title> Trello - Luly </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" media="screen" href="css\main.css" />
     </head>
     <body>
         <!-- SECTION HEADER -->
-        <header>
-            <section>
-                <article class="box-header">
-                    <img src="assets/images/trello-mark-white.svg" alt="logo trello">
-                    <a href="#">Tableros</a>
-                </article>
-                <article class="box-header">
-                    <img src="assets/images/search.svg" alt="search">
-                </article>
-            </section>
-            <section id="main-logo"> 
+        <header class="">
+            <div id="trello-tablero">
+                <a>
+                    <i class="fab fa-trello"></i>
+                    <span> Tableros </span>                        
+                </a>
+                <a id="search-area">
+                    <textarea id="searc-trello-header"></textarea>
+                    <i class="fas fa-search"></i>
+                </a>
+           </div>
+            <div id="trello-top">
+                <a class="box-header">
                     <h1>
                         <img src="assets/images/trello-logo-white.svg" alt="logo trello">
                     </h1>
-            </section>
-            <nav>
+                </a>
+            </div> 
+            <nav id="list-menu"> 
                 <li class="box-header">
-                    <img src="assets/images/add.svg" alt="add">
-                </li>
-                <li class="box-header">
-                    <img src="assets/images/info.svg" alt="info">
+                    <i class="fas fa-plus"></i>
                 </li>
                 <li class="box-header">
-                    <img src="assets/images/notification.svg" alt="notification">
+                    <i class="fas fa-info"></i>
                 </li>
-                <li>
-                    <img src="assets/images/circle.svg" alt="user">
+                <li class="box-header">
+                    <i class="fas fa-bell"></i>
                 </li>
-            </nav>
+                <li class="box-header">
+                    <i class="far fa-circle"></i>
+                </li>
+            </nav>     
         </header>
-        <main></main>
-        <footer></footer>
+        <!-- SECCION MAIN -->
+        <main>
+            <!-- LINEA SUPERIOR DEL MAIN -->
+            <div id=header-main>
+                <section class="">
+                    <a href="">
+                        <span> Tablero </span>
+                        <i class="far fa-star"></i>
+                    </a> 
+                    <a href="">   
+                        <span> Personal </span>
+                    </a>
+                    <a href="">    
+                        <span> Privado </span>
+                    </a>
+                </section>
+                <section class="">
+                    <a href="">
+                        <span> Mostrar menú </span>
+                    </a>
+                </section>
+            </div>
+            <!-- SECCION DE TABLEROS -->
+            <section class="tablero"> 
+                <div> 
+                    <p> Añadir una lista...</p> 
+                </div>
+                <form action="" id="tablero-lista">
+                    <input type="text" placeholder="Añadir una lista..." name="text-area-initial">
+                    <input type="button" value="Guardar">
+                    <i class="fas fa-times"></i>
+                    <input type="button" value="...">
+                </form>
+            </section>
+        </main>
+    
 
-        <script src="js\main.js"></script>
+        <script src="js\app.js"></script>
     </body>
 </html>
