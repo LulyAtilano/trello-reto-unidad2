@@ -5,21 +5,22 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title> Trello - Luly </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" media="screen" href="css\main.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+        <link rel="Shorcut Icon" href="assets/images/favicon.ico"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     </head>
     <body>
         <!-- SECTION HEADER -->
         <header class="">
             <div id="trello-tablero">
-                <a>
+                <section>
                     <i class="fab fa-trello"></i>
                     <span> Tableros </span>                        
-                </a>
-                <a id="search-area">
+                </section>
+                <section id="search-area">
                     <textarea id="searc-trello-header"></textarea>
                     <i class="fas fa-search"></i>
-                </a>
+                </section>
            </div>
             <div id="trello-top">
                 <a class="box-header">
@@ -39,7 +40,7 @@
                     <i class="fas fa-bell"></i>
                 </li>
                 <li class="box-header">
-                    <i class="far fa-circle"></i>
+                    <img src="assets/images/logo-laboratoria.png" alt="User Laboratoria">
                 </li>
             </nav>     
         </header>
@@ -66,20 +67,21 @@
                 </section>
             </div>
             <!-- SECCION DE TABLEROS -->
-            <section class="tablero"> 
+            <section id="container" class="tablero"> 
                 <div> 
-                    <p> Añadir una lista...</p> 
+                    <textarea type="text" class="txt show hide" id="textInitial" placeholder="Añadir una lista..."></textarea>
                 </div>
-                <form action="" id="tablero-lista">
+               <!-- <section id="containerList" class="taskList hide">Lista</section> -->
+            
+                <form action="#" id="tablero-lista" class="hide">
                     <input type="text" placeholder="Añadir una lista..." name="text-area-initial">
                     <input type="button" value="Guardar">
                     <i class="fas fa-times"></i>
-                    <input type="button" value="...">
                 </form>
             </section>
         </main>
     
 
-        <script src="js\app.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>

@@ -23,65 +23,125 @@ header > * > div {
     position: absolute;
 }
 
+/* SECTION TRELLO - TABLERO */
 header #trello-tablero {
-    box-sizing: content-box;
-    display: inline-block;
+    box-sizing: border-box;
+    display: inline-flex;
+    position: relative;
+    top: 0;
+    width: 25%;
+}
+
+header #trello-tablero > section:first-child {
+    border-radius: 3px;
+    background-color: #66A4C8;
+    bottom: 4px;
+    height: 30px;
+    left: 7px;
     position: relative;
     top: 4px;
-    bottom: 4px;
+    width: 100px;
 }
 
-header div#trello-tablero > a:first-child {
-    background-color: #66A4C8;
-    padding: 0.5em;
-    margin-right: 13px;
+header #trello-tablero section:first-child > i {
+    left: 7px;
     position: relative;
-    bottom: 0.9em;
-    width: 74px;
+    top: 7px;       
 }
 
-header div#trello-tablero a#search-area > a:last-child {
-    float: right;
-    right: 3px;
+header #trello-tablero section:first-child > span {
+    font-size: .9em;
+    font-weight: bolder;
+    left: 12px;
+    position: relative;
+    top: 6px;       
 }
 
-header div#trello-tablero a#search-area > textarea {
+header div#trello-tablero section:last-child > textarea {
     background-color: #66A4C8;
-    height: 20px;
-    padding: 0.5em;
+    border: 0;
+    border-radius: 3px;
+    bottom: 4px;
+    position: relative;
+    padding: 0;
+    height: 30px;
+    resize: none;
+    left: 15px;
+    top: 4px;
     width: 180px;
 }
 
-header #trello-top  {
+header #trello-tablero #search-area > i {
+    float: left;
+    top: 11px;
+    right: 45px;
+    position: absolute;
+}
+
+/* SECTION TRELLO - TOP */
+header > #trello-top  {
     display: inline;
-    top: 0;
+    position: relative;
+    width: 50%;
 }
 
 header #trello-top a > h1 {
-    left: 3em;
+    left: 10em;
     margin: 0;
     position: relative;
-    opacity: .4;
+    opacity: .6;
     overflow: auto;
     width: 3em;
 }
 
 header #trello-top a h1 img { 
-    height: 25px;
+    height: 22px;
     text-align: center;
-    
 }
 
-header nav#list-menu {
-    right: 8px;
-    overflow: auto;
-    position: absolute;
+/* SECTION LIST-MENU */
+header > #list-menu {
+    box-sizing: border-box;
+    display: inline;
+    position: relative;
+    width: 30%;
 } 
 
-header nav li {
+header #list-menu li {
+    background-color: #3385B5;
+    border-radius: 3px;
     display: inline-flex;
-    height: 1.2em;
-    text-decoration: none;    
+    height: 30px;
+    left: 13.5em;
+    margin-right: 5px;
+    position: relative;
+    text-decoration: none;
+    top: 4px;
+    width: 30px;
+    z-index: 10;   
+}
+
+header #list-menu li > i {
+    font-size: 2x;
+    height: 1.2em; 
+    left: 7px;
+    position: relative;
+    top: 7px;
+}
+
+header #list-menu li > i.fa-info {
+    left: 12px;
+}
+
+header #list-menu li:last-child {
+    background-color: transparent;
+}
+
+header #list-menu li:last-child img {
+    border-radius: 100%;
+    height: 30px;
+    right: 4px;
+    width: 30px;
 }
 
 /* ------------- MAIN ------------- */
@@ -119,33 +179,44 @@ main #header-main section:last-child a span {
 }
 
 /* ------------- SECCION DE TABLEROS ------------- */
+main #container {
+    box-sizing: content-box;
+    display: inline-block;
+    height: 535px;
+    position: absolute;
+    top: 5em;
+    width: 100%;
+}
 
-main .tablero div {
-    background-color: #005485;
-    color: white;
-    height: 30px;
-    left: 8px;
+main .tablero div #textInitial {
+    background-color: rgb(0, 84, 133, .9);
+    border: none;
+    text-decoration-color: white;
+    left: .8em;
+    min-height: 30px;
+    min-width: 300px;
     position: relative;
-    opacity: .6;
-    top: 9px;
+    /*opacity: 0.9;*/
+    resize: none;
+}
+/*
+main .tablero section#containerList {
+    border: 1px solid red;
+    background-color: #E2E4E6;
+    color: black;
+    height: 70px;
+    left: .8em;
+    position: absolute;
     width: 300px;
-}
-
-main .tablero div > p {
-    margin: 0;
-    position: relative;
-    left: .2em;
-    top: .3em;
-}
+} */
 
 main section.tablero #tablero-lista {
-    border: 1px solid green;
     background-color: #E2E4E6;
     bottom: 2px;
     box-sizing: content-box;
     color: black;
-    display: inline-block;
-    left: 8px;
+    height: 79px;
+    left: .8em;
     position: relative;
     width: 300px;
 }
@@ -156,34 +227,44 @@ main section.tablero #tablero-lista > input:first-child {
     display: block;
     border-radius: 3px;
     min-height: 30px;
-    top: 30px;
-    left: 8px;
-    width: 100%;
+    top: 4px;
+    left: 3px;
+    min-width: 292px;
 }
 
 main section.tablero #tablero-lista > input {
     border: none;
     background-color: #5aac44;
     border-radius: 3px;
+    bottom: 3px;
     color: white;
+    left: 3px;
     min-height: 32px;
     padding: 4px, 16px;
+    position: relative;
+    top: 8px;
     width: 30%;
 }
 
 main .tablero #tablero-lista > i {
     color: grey;
+    font-size: 1.5em;
+    position: relative;
+    opacity: .5;
+    left: 8px;
+    top: 11px;
 }
 
+/*
 main section.tablero #tablero-lista > input:last-child {
     border: 1px solid red;
     background-color: inherit;
     color: gray;
     font-size: 2em;
-    padding: 
-}
+} */
 
 /* ------------- CLASES ------------- */
+/*
 .box-header {
     align-content: center;
     background-color: #3385B5;
@@ -194,5 +275,15 @@ main section.tablero #tablero-lista > input:last-child {
     margin-right: 0.5em;
     margin: 0;
     right: 5em;
+    top: 4px;
     width: 2em;
+} */
+
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }
