@@ -19,30 +19,55 @@ saveTasks.addEventListener('click', function() {
     var commentSave = document.createTextNode(textSave);
     var titleList = document.createElement('h3');
     titleList.classList.add('titleList');
-    var insertInput = document.createElement('input');
-    insertInput.type = "button";
-    insertInput.setAttribute('class', 'new-Input');
-    insertInput.value = '';
     
+    var hideForm = document.getElementById('tablero-lista');
+
     // Anidación de elementos
     titleList.appendChild(commentSave);
     littleContainer.appendChild(titleList);
-    littleContainer.appendChild(insertInput);
     container.appendChild(littleContainer);
     container.appendChild(addNewA);
-});
+    hideForm.style.display='none'; //formulario escondido
 
-/*
-var inputText = document.getElementById('inputText').value;
-console.log(inputText); */
+    addNewA.addEventListener('click', function() {
+        var task = document.createElement('textarea');
+        task.id="inputText";
+        var cancel = document.createElement('button');
+        cancel.classList.add('buttonCancel');
+        var addNewTask = document.createElement('button');
+        addNewTask.classList.add('buttonAdd');
+        var space = document.createElement('br');
+        var saveTasksContainer = document.createElement('div');
+        saveTasksContainer.id= 'saveTasksContainer';
+        var addTasksContainer = document.createElement('div');
 
-/*
-function createList = {
-    var mainContainer = document.getElementById('containerList');
-    var container = document.createElement('section');
-    var list = document.createElement('li');
+        var NameButtonCancel = document.createTextNode('X');
+        var NameButtonAdd = document.createTextNode('Añadir');
 
+        // Anidación de tareas en el Div anterior.
+        cancel.appendChild(NameButtonCancel);
+        addNewTask.appendChild(NameButtonAdd);
 
-    container.appendChild(list);
-    mainContainer.appendChild(container);
-} */
+        addTasksContainer.appendChild(task);
+        addTasksContainer.appendChild(space);
+        addTasksContainer.appendChild(addNewTask);
+        addTasksContainer.appendChild(cancel);
+        // Anidar los 2 contenedores en container
+        container.removeChild(addNewA);//elimina añadir tarea
+        container.appendChild(saveTasksContainer);
+        container.appendChild(addTasksContainer);
+
+        addNewTask.addEventListener('click', function() {
+            var save = document.createElement('p');
+            var newTask = task.value;
+            var textNewTask = document.createTextNode(newTask);
+
+            // Se guardan las tareas en el contenedor interno.
+            save.appendChild(textNewTask);
+            saveTasksContainer.appendChild(save);
+            saveTasksContainer.appendChild(addTasksContainer);
+        });
+
+    });
+
+}); 
