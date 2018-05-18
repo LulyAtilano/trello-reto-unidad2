@@ -36,9 +36,11 @@ header #trello-tablero > section:first-child {
     border-radius: 3px;
     background-color: #66A4C8;
     bottom: 4px;
+    display: inline-flex;
     height: 30px;
     left: 7px;
     position: relative;
+    vertical-align: middle;
     top: 4px;
     width: 100px;
 }
@@ -71,11 +73,10 @@ header div#trello-tablero section:last-child > textarea {
     width: 180px;
 }
 
-header #trello-tablero #search-area > i {
-    float: left;
-    top: 11px;
-    right: 45px;
-    position: absolute;
+header #trello-tablero #search-area > i { 
+    bottom: 22px;
+    left: 165px;
+    position: relative;
 }
 
 /* SECTION TRELLO - TOP */
@@ -108,16 +109,15 @@ header > #list-menu {
 } 
 
 header #list-menu > ul {
-    border: 1px dotted white;
     display: inline-flex;
     float: right;
     list-style: none;
-    margin: 0;
+    margin-top: 4px;
+    padding: 0;
     width: 50%;
 }
 
 header #list-menu li {
-    border: 1px solid black;
     background-color: #3385B5;
     border-radius: 3px;
     height: 30px;
@@ -273,7 +273,8 @@ main .tablero section#containerList {
 
 .titleList {
     left: 4px;
-    margin: 0;
+    margin-top: 9px;
+    margin-left: 8px;
     padding-bottom: 1em;
     top: 4px;
 }
@@ -286,14 +287,52 @@ main .tablero section#containerList {
     left: 5px;
 }
 
+/* Estilo de los botones del contenedor */ 
 
-/*
-main section.tablero #tablero-lista > input:last-child {
-    border: 1px solid red;
-    background-color: inherit;
-    color: gray;
-    font-size: 2em;
-} */
+.inputText {
+    resize: none;
+    width: 282px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#pText {
+    background-color: white;
+    height: 26px;
+    margin: 10px 5px;
+    padding: 6px 8px;
+    resize: none;
+    width: 272px;
+}
+
+.buttonAdd {
+    border: black;
+    background-color: #5aac44;
+    border-radius: 3px;
+    bottom: 3px;
+    color: white;
+    margin: 0 0 4px 6px;
+    min-height: 32px;
+    padding: 4px, 9px;
+    top: 8px;
+    width: 71px;
+} 
+
+.buttonCancel {
+    color: grey;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    left: 1px;
+    margin: 0;
+    opacity: .9;
+    position: relative;
+    top: 2px;
+}
+
+.buttonCancel > i {
+    font-size: 1.2em;
+}
 
 /* ------------- CLASES ------------- */
 

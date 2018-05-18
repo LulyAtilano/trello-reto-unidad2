@@ -31,7 +31,7 @@ saveTasks.addEventListener('click', function() {
 
     addNewA.addEventListener('click', function() {
         var task = document.createElement('textarea');
-        task.id="inputText";
+        task.classList.add("inputText");
         var cancel = document.createElement('button');
         cancel.classList.add('buttonCancel');
         var addNewTask = document.createElement('button');
@@ -41,8 +41,11 @@ saveTasks.addEventListener('click', function() {
         saveTasksContainer.id= 'saveTasksContainer';
         var addTasksContainer = document.createElement('div');
 
-        var NameButtonCancel = document.createTextNode('X');
+        //var NameButtonCancel = document.createTextNode('X');
+        var NameButtonCancel = document.createElement('i');
+        NameButtonCancel.classList.add('fas', 'fa-times', 'buttonCancel');
         var NameButtonAdd = document.createTextNode('Añadir');
+        NameButtonAdd.id = 'nameButtonAdd';
 
         // Anidación de tareas en el Div anterior.
         cancel.appendChild(NameButtonCancel);
@@ -59,6 +62,7 @@ saveTasks.addEventListener('click', function() {
 
         addNewTask.addEventListener('click', function() {
             var save = document.createElement('p');
+            save.id = "pText";
             var newTask = task.value;
             var textNewTask = document.createTextNode(newTask);
 
